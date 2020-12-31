@@ -22,7 +22,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/jmoiron/sqlx/reflectx"
+	"github.com/lempea-edge/sqlx/reflectx"
 	_ "github.com/lib/pq"
 	_ "github.com/mattn/go-sqlite3"
 )
