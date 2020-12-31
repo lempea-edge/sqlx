@@ -22,7 +22,6 @@ import (
 	"testing"
 	"time"
 
-	_ "github.com/go-sql-driver/mysql"
 	"github.com/jmoiron/sqlx/reflectx"
 	_ "github.com/lib/pq"
 	_ "github.com/mattn/go-sqlite3"
@@ -58,10 +57,6 @@ func RunWithSchemaContext(ctx context.Context, schema Schema, t *testing.T, test
 	if TestSqlite {
 		create, drop := schema.Sqlite3()
 		runner(ctx, sldb, t, create, drop)
-	}
-	if TestMysql {
-		create, drop := schema.MySQL()
-		runner(ctx, mysqldb, t, create, drop)
 	}
 }
 

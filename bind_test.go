@@ -42,7 +42,7 @@ BenchmarkBindSpeed/new-4         	42535839	        27.5 ns/op
 
 func BenchmarkBindSpeed(b *testing.B) {
 	testDrivers := []string{
-		"postgres", "pgx", "mysql", "sqlite3", "ora", "sqlserver",
+		"postgres", "pgx", "sqlite3", "ora", "sqlserver",
 	}
 
 	b.Run("old", func(b *testing.B) {

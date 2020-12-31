@@ -22,7 +22,6 @@ import (
 	"testing"
 	"time"
 
-	_ "github.com/go-sql-driver/mysql"
 	"github.com/jmoiron/sqlx/reflectx"
 	_ "github.com/lib/pq"
 	_ "github.com/mattn/go-sqlite3"
@@ -36,7 +35,7 @@ var _ Execer = &qStmt{}
 
 var TestPostgres = true
 var TestSqlite = true
-var TestMysql = true
+var TestMysql = false
 
 var sldb *DB
 var pgdb *DB
